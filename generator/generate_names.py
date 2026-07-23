@@ -5,6 +5,9 @@ import random
 with open("../data/names_database.json", "r", encoding="utf-8") as f:
     data = json.load(f)
 
+version = data["meta"]["version"]
+print(f"DND Name Generator v{version}")
+
 races = data["races"]
 print("Available races:", ", ".join(races.keys()))
 
