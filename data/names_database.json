@@ -1,0 +1,112 @@
+{
+  "meta": {
+    "version": "1.0.0",
+    "last_updated": "2026-07-23",
+    "changelog": "Expanded name database: 15-20 prefixes/suffixes per race (225-400 combinations each)",
+    "update_url": "https://raw.githubusercontent.com/cynicznykot/dnd-name-generator-json/main/data/names_database.json",
+    "total_races": 10,
+    "total_combinations": 4000
+  },
+  "races": {
+    "Aasimar": {
+      "displayName": {
+        "en": "Aasimar",
+        "ru": "Аасимар"
+      },
+      "style": "divine, celestial, melodic",
+      "examples": ["Aeliel", "Seraphina", "Valanor", "Celestia", "Luminara"],
+      "prefixes": ["Ael", "Ser", "Val", "Cel", "Lum", "Sol", "Aur", "Ely", "Mir", "Zan", "Pha", "Ith", "Ora", "Ves", "Anu", "Hel", "Lun", "Stel", "Ari", "Nim"],
+      "suffixes": ["iel", "ia", "an", "is", "ara", "ius", "ael", "ine", "ona", "ith", "ara", "ion", "iel", "ia", "us", "or", "ina", "es", "ia", "on"]
+    },
+    "Gnome": {
+      "displayName": {
+        "en": "Gnome",
+        "ru": "Гном"
+      },
+      "style": "whimsical, mechanical, tinkering",
+      "examples": ["Fizwick", "Gimbuckle", "Nimwig", "Pipkin", "Tiktle"],
+      "prefixes": ["Fiz", "Gim", "Nim", "Pip", "Rin", "Tik", "Wiz", "Zil", "Bin", "Fen", "Hob", "Kip", "Lil", "Mim", "Nib", "Pim", "Quip", "Sib", "Tin", "Vim"],
+      "suffixes": ["wick", "buckle", "wig", "nap", "kin", "by", "tle", "fin", "bit", "dash", "gle", "nip", "pol", "ram", "sel", "tam", "ver", "win", "zer", "zin"]
+    },
+    "Goliath": {
+      "displayName": {
+        "en": "Goliath",
+        "ru": "Голиаф"
+      },
+      "style": "strong, harsh, mountainous",
+      "examples": ["Gronar", "Maukor", "Kothak", "Thokul", "Voran"],
+      "prefixes": ["Gron", "Mauk", "Koth", "Ruk", "Thok", "Vor", "Zan", "Bru", "Drak", "Gor", "Hrak", "Kra", "Mor", "Nak", "Orog", "Ror", "Ska", "Turok", "Vrak", "Zog"],
+      "suffixes": ["ar", "or", "ul", "ak", "on", "ik", "an", "ath", "ek", "im", "og", "osh", "uk", "un", "ur", "ush", "ut", "var", "zik", "zor"]
+    },
+    "Dwarf": {
+      "displayName": {
+        "en": "Dwarf",
+        "ru": "Дварф"
+      },
+      "style": "stout, runic, underground",
+      "examples": ["Thorin", "Balin", "Durin", "Gimli", "Fili"],
+      "prefixes": ["Thor", "Bal", "Dur", "Gim", "Fili", "Kili", "Bomb", "Dwal", "Glo", "Nain", "Ori", "Nori", "Bif", "Bof", "Oin", "Gror", "Fund", "Thrain", "Thror", "Borin"],
+      "suffixes": ["in", "ur", "ar", "or", "il", "ek", "on", "al", "ir", "un", "ak", "im", "ol", "um", "ir", "ak", "il", "in", "or", "ur"]
+    },
+    "Dragonborn": {
+      "displayName": {
+        "en": "Dragonborn",
+        "ru": "Драконорожденный"
+      },
+      "style": "draconic, fierce, chromatic",
+      "examples": ["Korax", "Vexis", "Tharus", "Sylas", "Ashur"],
+      "prefixes": ["Kor", "Vex", "Thar", "Syl", "Ash", "Drak", "Fur", "Gor", "Hrak", "Jax", "Kael", "Lor", "Mal", "Nor", "Orax", "Pyr", "Rax", "Sark", "Tor", "Ur"],
+      "suffixes": ["ax", "is", "us", "on", "ar", "ix", "ath", "an", "or", "os", "um", "ir", "ak", "im", "ol", "uk", "ul", "ur", "ut", "ix"]
+    },
+    "Orc": {
+      "displayName": {
+        "en": "Orc",
+        "ru": "Орк"
+      },
+      "style": "brutal, guttural, war-like",
+      "examples": ["Goruk", "Morak", "Tharosh", "Rugar", "Kraguk"],
+      "prefixes": ["Gor", "Mor", "Thar", "Rug", "Krag", "Brok", "Ugl", "Drog", "Grak", "Hog", "Karg", "Lug", "Mog", "Nog", "Ogg", "Pog", "Rog", "Skul", "Tog", "Zug"],
+      "suffixes": ["uk", "ak", "osh", "ar", "og", "ash", "bak", "ish", "ok", "on", "ul", "um", "un", "ur", "ut", "ag", "ek", "ib", "od", "ug"]
+    },
+    "Halfling": {
+      "displayName": {
+        "en": "Halfling",
+        "ru": "Полурослик"
+      },
+      "style": "cheerful, simple, cozy",
+      "examples": ["Bilbo", "Frodo", "Samwise", "Merry", "Pippin"],
+      "prefixes": ["Bil", "Fro", "Sam", "Mer", "Pip", "Ros", "Ham", "Dro", "Fal", "Hob", "Lob", "Mim", "Nob", "Pal", "Ror", "Sar", "Tob", "Wil", "Yor", "Zim"],
+      "suffixes": ["bo", "do", "wise", "ry", "kin", "ic", "fast", "lo", "mo", "no", "po", "ro", "so", "to", "vo", "lo", "mo", "no", "po", "ro"]
+    },
+    "Tiefling": {
+      "displayName": {
+        "en": "Tiefling",
+        "ru": "Тифлинг"
+      },
+      "style": "infernal, dramatic, dark",
+      "examples": ["Infer", "Malrath", "Zarix", "Vexia", "Calith"],
+      "prefixes": ["In", "Mal", "Zar", "Vex", "Cal", "Lil", "Mar", "Aza", "Bel", "Caz", "Dex", "Fen", "Gor", "Hel", "Jax", "Kir", "Mor", "Nyx", "Oro", "Pyr"],
+      "suffixes": ["fer", "rath", "ix", "ius", "ia", "ith", "os", "an", "ar", "el", "im", "is", "on", "or", "ul", "um", "un", "ur", "us", "ut"]
+    },
+    "Human": {
+      "displayName": {
+        "en": "Human",
+        "ru": "Человек"
+      },
+      "style": "diverse, versatile, common",
+      "examples": ["Alric", "Berard", "Edwin", "Garred", "Harrison"],
+      "prefixes": ["Al", "Ber", "Ed", "Gar", "Har", "Ric", "Wil", "Ald", "Bran", "Ced", "Dun", "Ead", "Folc", "Gil", "Heng", "Ive", "Leof", "Ord", "Rud", "Sig"],
+      "suffixes": ["ric", "ard", "win", "red", "son", "bert", "ian", "mar", "mund", "ric", "ald", "ar", "in", "an", "el", "us", "is", "on", "or", "um"]
+    },
+    "Elf": {
+      "displayName": {
+        "en": "Elf",
+        "ru": "Эльф"
+      },
+      "style": "graceful, melodic, ancient",
+      "examples": ["Aelanor", "Galadriel", "Elrond", "Thalion", "Celebrim"],
+      "prefixes": ["Ael", "Gal", "El", "Thal", "Cele", "Fing", "Gil", "Amar", "Be", "Cyr", "Ere", "Fin", "Gla", "Hald", "Idril", "Laer", "Leg", "Luth", "Maer", "Nim"],
+      "suffixes": ["anor", "ion", "riel", "wen", "dor", "mir", "thil", "ian", "ien", "il", "in", "ith", "ius", "or", "os", "thal", "wen", "wyn", "ryl", "sul"]
+    }
+  }
+}
