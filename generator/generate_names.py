@@ -5,13 +5,26 @@ import random
 with open("../data/names_database.json", "r", encoding="utf-8") as f:
     data = json.load(f)
 
-race = input("Enter the race: ")
+races = data["races"]
+print("Available races:", ", ".join(races.keys()))
 
-if race in data["races"]:
-    prefixes = data["races"][race]["prefixes"]
-    suffixes = data["races"][race]["suffixes"]
-    name = random.choice(prefixes) + random.choice(suffixes)
-    print(f"Name: {name}")
-else:
-    print("Race not found")
+while True:
+    race = input("Enter the race: ").lower().capitalize()
+
+    if race in data["races"]:
+        prefixes = data["races"][race]["prefixes"]
+        suffixes = data["races"][race]["suffixes"]
+        name = random.choice(prefixes) + random.choice(suffixes)
+        print(f"Name: {name}")
+
+        again_race = input("Generate another option (y/n)? ")
+
+        if again_race in ['yes', 'y', 'да', 'д', 'а']:
+            continue
+        else:
+            break
+    else:
+        print("Race not found")
+
+print("Goodbye!")
 
