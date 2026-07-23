@@ -1,9 +1,32 @@
 import json
 import random
+import requests
 
 
 with open("../data/names_database.json", "r", encoding="utf-8") as f:
     data = json.load(f)
+
+local_version = data["meta"]["version"]
+update_url = data["meta"]["update_url"]
+
+try:
+    response = requests.get(update_url, timeout=3)
+    remote_data = response.json()
+    remote_version = remote_data["meta"]["version"]
+except:
+    remote_version = None
+
+if remote_version and remote_version != local_version:
+    print(f"New version is available: {remote_version} (Current version: {local_version})")
+    answer = input("Do you wish to generate a new version (y/n)? ").lower()
+    if answer in ['yes', 'y', 'да', 'д', 'а']:
+        with open("../data/names_database.json", "w", encoding="utf-8") as f:
+            json.dump(remote_data, f, ensure_ascii=False, indent=2)
+        print("The database has been updated!")
+        data = remote_data
+        local_version = remote_version
+
+
 
 version = data["meta"]["version"]
 print(f"DND Name Generator v{version}")
