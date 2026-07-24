@@ -62,7 +62,10 @@ uvicorn main:app --reload
 
 ```python
 import requests
-race = "Elf"
+
+# В реальном приложении расу выбирает пользователь
+race = "Elf"  # Замените на выбор пользователя
+
 response = requests.get("http://localhost:8000/generate", params={"race": race})
 print(response.json()["name"])
 ```
@@ -73,8 +76,9 @@ print(response.json()["name"])
 using System.Net.Http;
 using System.Text.Json;
 
-var client = new HttpClient();
-string selectedRace = "Elf";
+// В реальном приложении расу выбирает пользователь
+string selectedRace = "Elf";  // Замените на raceComboBox.Text
+
 string url = $"http://localhost:8000/generate?race={selectedRace}";
 string response = await client.GetStringAsync(url);
 var json = JsonSerializer.Deserialize<Dictionary<string, string>>(response);
@@ -84,7 +88,9 @@ Console.WriteLine(json["name"]);
 ### JavaScript (fetch)
 
 ```javascript
-const race = "Elf";
+// В реальном приложении расу выбирает пользователь
+const race = "Elf";  // Замените на document.getElementById("raceSelect").value
+
 const response = await fetch(`http://localhost:8000/generate?race=${race}`);
 const data = await response.json();
 console.log(data.name);
