@@ -5,13 +5,13 @@
     "changelog": "Expanded name database: 15-20 prefixes/suffixes per race (225-400 combinations each)",
     "update_url": "https://raw.githubusercontent.com/cynicznykot/dnd-name-generator-json/main/data/names_database.json",
     "total_races": 10,
-    "total_combinations": 4000
+    "total_combinations": 4000,
+    "land": "en"
   },
   "races": {
     "Aasimar": {
       "displayName": {
-        "en": "Aasimar",
-        "ru": "Аасимар"
+        "en": "Aasimar"
       },
       "style": "divine, celestial, melodic",
       "examples": ["Aeliel", "Seraphina", "Valanor", "Celestia", "Luminara"],
@@ -20,8 +20,7 @@
     },
     "Gnome": {
       "displayName": {
-        "en": "Gnome",
-        "ru": "Гном"
+        "en": "Gnome"
       },
       "style": "whimsical, mechanical, tinkering",
       "examples": ["Fizwick", "Gimbuckle", "Nimwig", "Pipkin", "Tiktle"],
@@ -30,8 +29,7 @@
     },
     "Goliath": {
       "displayName": {
-        "en": "Goliath",
-        "ru": "Голиаф"
+        "en": "Goliath"
       },
       "style": "strong, harsh, mountainous",
       "examples": ["Gronar", "Maukor", "Kothak", "Thokul", "Voran"],
@@ -40,8 +38,7 @@
     },
     "Dwarf": {
       "displayName": {
-        "en": "Dwarf",
-        "ru": "Дварф"
+        "en": "Dwarf"
       },
       "style": "stout, runic, underground",
       "examples": ["Thorin", "Balin", "Durin", "Gimli", "Fili"],
@@ -50,8 +47,7 @@
     },
     "Dragonborn": {
       "displayName": {
-        "en": "Dragonborn",
-        "ru": "Драконорожденный"
+        "en": "Dragonborn"
       },
       "style": "draconic, fierce, chromatic",
       "examples": ["Korax", "Vexis", "Tharus", "Sylas", "Ashur"],
@@ -60,8 +56,7 @@
     },
     "Orc": {
       "displayName": {
-        "en": "Orc",
-        "ru": "Орк"
+        "en": "Orc"
       },
       "style": "brutal, guttural, war-like",
       "examples": ["Goruk", "Morak", "Tharosh", "Rugar", "Kraguk"],
@@ -70,8 +65,7 @@
     },
     "Halfling": {
       "displayName": {
-        "en": "Halfling",
-        "ru": "Полурослик"
+        "en": "Halfling"
       },
       "style": "cheerful, simple, cozy",
       "examples": ["Bilbo", "Frodo", "Samwise", "Merry", "Pippin"],
@@ -80,8 +74,7 @@
     },
     "Tiefling": {
       "displayName": {
-        "en": "Tiefling",
-        "ru": "Тифлинг"
+        "en": "Tiefling"
       },
       "style": "infernal, dramatic, dark",
       "examples": ["Infer", "Malrath", "Zarix", "Vexia", "Calith"],
@@ -90,8 +83,7 @@
     },
     "Human": {
       "displayName": {
-        "en": "Human",
-        "ru": "Человек"
+        "en": "Human"
       },
       "style": "diverse, versatile, common",
       "examples": ["Alric", "Berard", "Edwin", "Garred", "Harrison"],
@@ -100,8 +92,7 @@
     },
     "Elf": {
       "displayName": {
-        "en": "Elf",
-        "ru": "Эльф"
+        "en": "Elf"
       },
       "style": "graceful, melodic, ancient",
       "examples": ["Aelanor", "Galadriel", "Elrond", "Thalion", "Celebrim"],
