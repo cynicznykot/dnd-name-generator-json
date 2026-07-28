@@ -159,6 +159,6 @@ dnd-name-generator/
 
 MIT — use as you wish.
 
-🤝 Contacts
+## 🤝 Contacts
 
 Author: cynicznykot
