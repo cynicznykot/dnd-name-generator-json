@@ -2,6 +2,7 @@ import json
 import random
 from fastapi import FastAPI, Query
 from fastapi.responses import JSONResponse
+from fastapi import Request
 
 with open ("../data/ru/names_database.json", "r", encoding="utf-8") as f:
     data_ru = json.load(f)
@@ -28,15 +29,17 @@ def root():
 
 @app.get("/generate")
 def generate_name(
-    race: str = Query(..., description="Race name (e.g., Elf, Эльф)"),
-    lang: str = Query("ru", description="Language: ru or en")
+    race: str,
+    request: Request,
+    lang: str = None
 ):
 
-    if lang not in LANG_DB:
-        return JSONResponse(
-            status_code=400,
-            content={"error": f"Language '{lang}' not supported. Use 'ru' or 'en'."}
-        )
+    if lang is None:
+        accept_language = request.headers.get("accept-language", "ru")
+        lang = accept_language[:2]
+
+        if lang not in ["ru", "en"]:
+            lang = "ru"
 
     races = LANG_DB[lang]
 
