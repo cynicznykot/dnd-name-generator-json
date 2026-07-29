@@ -5,60 +5,191 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a31fb7fc-3972-4d3a-965c-b5906e3c0e6b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dnd-name-generator.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.en.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/names_database.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/csharp_example.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/js_example.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/python_example.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/generator/generate_names.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wrappers/csharp/DndNameGenerator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wrappers/javascript/dndNames.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wrappers/python/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wrappers/python/dnd_names.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dnd-name-generator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dnd-name-generator.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="16" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="Dockerfile" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;cynicznykot&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/cynicznykot/dnd-name-generator-json.git&quot;,
+    &quot;accountId&quot;: &quot;bc84021c-9452-4647-8c7b-7d8e729e00fe&quot;
+  }
+}</component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.596954979036521" />
+      <entry key="MS500" value="2.921841171491936" />
+      <entry key="S2" value="5.177183292946842" />
+      <entry key="S5" value="6.5817276222087076" />
+      <entry key="S10" value="7.230026374500816" />
+      <entry key="S30" value="7.728371610939799" />
+      <entry key="S60" value="7.862235995025262" />
+      <entry key="M2" value="7.959953033323801" />
+      <entry key="M5" value="11.852616009048837" />
+      <entry key="M10" value="37.60912802992301" />
+      <entry key="M15" value="71.62344779946847" />
+      <entry key="M30" value="152.26106606804382" />
+      <entry key="H1" value="230.0360298842295" />
+      <entry key="H2" value="285.03704191343184" />
+      <entry key="H4" value="317.9010809660014" />
+      <entry key="D1" value="348.4989440268224" />
+      <entry key="W1" value="354.0631605662813" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="1.4363335336753984E-240" />
+      <entry key="S5" value="1.4456544676794842E-96" />
+      <entry key="S10" value="1.8377269431946265E-48" />
+      <entry key="S30" value="2.477277598512925E-16" />
+      <entry key="S60" value="2.7993482301124057E-8" />
+      <entry key="M2" value="3.439200133195026E-4" />
+      <entry key="M5" value="0.13310221467309252" />
+      <entry key="M10" value="1.1495985833609412" />
+      <entry key="M15" value="2.472374196850042" />
+      <entry key="M30" value="5.525853275824432" />
+      <entry key="H1" value="8.414338135433688" />
+      <entry key="H2" value="10.438739467889945" />
+      <entry key="H4" value="11.643451784782727" />
+      <entry key="D1" value="12.76251431029102" />
+      <entry key="W1" value="12.965782572202054" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="0.7562209559573746" />
+      <entry key="MS500" value="2.578504216860941" />
+      <entry key="S2" value="4.854419724806635" />
+      <entry key="S5" value="6.354251162448385" />
+      <entry key="S10" value="7.090002804705798" />
+      <entry key="S30" value="7.674515398749098" />
+      <entry key="S60" value="7.834312301804185" />
+      <entry key="M2" value="7.946064912026413" />
+      <entry key="M5" value="11.977236461138546" />
+      <entry key="M10" value="38.74154444001475" />
+      <entry key="M15" value="74.07183862528316" />
+      <entry key="M30" value="157.75944925806826" />
+      <entry key="H1" value="238.42900831984463" />
+      <entry key="H2" value="295.4623822240647" />
+      <entry key="H4" value="329.5370176624802" />
+      <entry key="D1" value="361.26007900188455" />
+      <entry key="W1" value="367.02874279238694" />
+    </decayedShown>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="3GtcmHzgUdmhWmZILkjn1rI83ON" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.generate_names.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/CynicznyKot/PythonProjects/dnd-name-generator-json&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
   }
-}]]></component>
+}</component>
+  <component name="RunManager" selected="Python.generate_names">
+    <configuration name="generate_names" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="dnd-name-generator" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/generator" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="false" />
+      <option name="RUN_TOOL" value="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/generator/generate_names.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="dnd-name-generator" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/api" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="false" />
+      <option name="RUN_TOOL" value="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/api/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.generate_names" />
+        <item itemvalue="Python.main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-975db3bf15a3-31b6be0877a2-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.18034.82" />
+        <option value="bundled-python-sdk-245168a56dbd-c2ffad84badb-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-261.25134.203" />
       </set>
     </attachedChunks>
   </component>
@@ -72,5 +203,8 @@
       <updated>1784794462132</updated>
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
 </project>
