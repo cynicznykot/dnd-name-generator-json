@@ -60,15 +60,22 @@ def generate_name(race: str, request: Request, lang: str = None):
     if not races:
         return JSONResponse(
             status_code=500,
-            content={"error": "Race data not loaded. Check server logs for missing JSON files."}
+            content={"error": "Race data not loaded."}
         )
 
-    if race in races:
-        prefixes = races[race]["prefixes"]
-        suffixes = races[race]["suffixes"]
+
+    found_race = None
+    for existing_race in races.keys():
+        if existing_race.lower() == race.lower():
+            found_race = existing_race
+            break
+
+    if found_race:
+        prefixes = races[found_race]["prefixes"]
+        suffixes = races[found_race]["suffixes"]
         name = random.choice(prefixes) + random.choice(suffixes)
         return {
-            "race": race,
+            "race": found_race,  
             "name": name,
             "lang": lang
         }
