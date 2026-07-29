@@ -1,14 +1,19 @@
 import json
+import os
 import random
 from fastapi import FastAPI, Query
 from fastapi.responses import JSONResponse
 from fastapi import Request
 
-with open ("../data/ru/names_database.json", "r", encoding="utf-8") as f:
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+ru_json_path = os.path.join(BASE_DIR, "data", "ru", "names_database.json")
+en_json_path = os.path.join(BASE_DIR, "data", "en", "names_database.json")
+
+with open(ru_json_path, "r", encoding="utf-8") as f:
     data_ru = json.load(f)
     races_ru = data_ru["races"]
 
-with open("../data/en/names_database.json", "r", encoding="utf-8") as f:
+with open(en_json_path, "r", encoding="utf-8") as f:
     data_en = json.load(f)
     races_en = data_en["races"]
 
