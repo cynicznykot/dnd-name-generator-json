@@ -1,4 +1,3 @@
 fastapi
-uvicorn[standart]
-requests
+uvicorn
 
