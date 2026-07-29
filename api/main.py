@@ -63,10 +63,11 @@ def generate_name(race: str, request: Request, lang: str = None):
             content={"error": "Race data not loaded."}
         )
 
-
     found_race = None
+    race_input_lower = race.strip().lower()
+
     for existing_race in races.keys():
-        if existing_race.lower() == race.lower():
+        if existing_race.strip().lower() == race_input_lower:
             found_race = existing_race
             break
 
@@ -75,12 +76,15 @@ def generate_name(race: str, request: Request, lang: str = None):
         suffixes = races[found_race]["suffixes"]
         name = random.choice(prefixes) + random.choice(suffixes)
         return {
-            "race": found_race,  
+            "race": found_race,
             "name": name,
             "lang": lang
         }
     else:
         return JSONResponse(
             status_code=400,
-            content={"error": f"Race '{race}' not found in {lang}"}
+            content={
+                "error": f"Раса '{race}' не найдена.",
+                "available_races": list(races.keys())
+            }
         )
