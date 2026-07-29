@@ -5,27 +5,30 @@ from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
 from pathlib import Path
 
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 ru_json_path = BASE_DIR / "data" / "ru" / "names_database.json"
 en_json_path = BASE_DIR / "data" / "en" / "names_database.json"
 
 
-def load_race_data(file_path):
+def load_data(file_path):
     try:
         with open(file_path, "r", encoding="utf-8") as f:
-            data = json.load(f)
-            return data.get("races", {})
+            return json.load(f)
     except FileNotFoundError:
-        print(f"❌ ОШИБКА: Не найден файл {file_path}")
-        return {}
-    except json.JSONDecodeError:
-        print(f"❌ ОШИБКА: Файл {file_path} поврежден (невалидный JSON)")
-        return {}
+        print(f"CRITICAL ERROR: File not found at {file_path}")
+        return {"races": {}}
+    except Exception as e:
+        print(f"CRITICAL ERROR: Failed to load file {file_path}: {e}")
+        return {"races": {}}
 
 
-races_ru = load_race_data(ru_json_path)
-races_en = load_race_data(en_json_path)
+data_ru = load_data(ru_json_path)
+data_en = load_data(en_json_path)
+
+races_ru = data_ru.get("races", {})
+races_en = data_en.get("races", {})
 
 LANG_DB = {
     "ru": races_ru,
@@ -41,7 +44,7 @@ app = FastAPI(
 
 @app.get("/")
 def root():
-    return {"message": "DND Name Generator API is running"}
+    return {"message": "DND Name Generator API is running", "status": "ok"}
 
 
 @app.get("/generate")
@@ -57,7 +60,7 @@ def generate_name(race: str, request: Request, lang: str = None):
     if not races:
         return JSONResponse(
             status_code=500,
-            content={"error": f"Language data '{lang}' not loaded."}
+            content={"error": "Race data not loaded. Check server logs for missing JSON files."}
         )
 
     if race in races:
