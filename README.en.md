@@ -41,8 +41,8 @@ Built with **Python + FastAPI**.
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/cynicznykot/dnd-name-generator-json.git
-cd dnd-name-generator-json
+git clone https://github.com/cynicznykot/dnd-name-generator-api.git
+cd dnd-name-generator-api
 ```
 
 ### 2. Create a virtual environment
