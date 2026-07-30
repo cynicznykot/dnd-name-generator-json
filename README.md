@@ -13,6 +13,7 @@
 - [📦 Установка и запуск](#-установка-и-запуск)
 - [📚 API Документация](#-api-документация)
 - [🌐 Примеры использования](#-примеры-использования)
+- [🌐 Инструкция по использованию D&D Name Generator API](#-инструкция-по-использованию-d&d-name-generator-api)
 - [🧩 Поддерживаемые расы](#-поддерживаемые-расы)
 - [📂 Структура проекта](#-структура-проекта)
 - [📜 Лицензия](#-лицензия)
@@ -68,7 +69,7 @@ uvicorn main:app --reload
 После запуска сервера документация доступна по адресу:
 👉 http://127.0.0.1:8000/docs (Swagger)
 
-## 🌐 Примеры использования (C#, Python, JS)
+## 🌐 Примеры использования (C#, Python, JS) локально
 
 ### Python
 
@@ -112,6 +113,174 @@ const response = await fetch(`http://localhost:8000/generate?race=${race}&lang=$
 const data = await response.json();
 console.log(data.name);
 ```
+
+## 📘 Инструкция по использованию D&D Name Generator API
+
+Базовая ссылка API:
+https://dnd-name-generator-api.vercel.app
+
+Эндпоинт:
+GET /generate
+
+Параметры:
+Параметр	Тип	Обязательный	Описание
+race	string	✅ Да	Название расы (например, Эльф, Elf, Дварф)
+lang	string	❌ Нет	Язык ответа: ru (русский, по умолчанию) или en (английский)
+
+Пример запроса:
+https://dnd-name-generator-api.vercel.app/generate?race=Эльф&lang=ru
+
+Пример ответа (JSON):
+json
+
+{
+  "race": "Эльф",
+  "name": "Эльриэль",
+  "lang": "ru"
+}
+
+Ошибка (если раса не найдена):
+json
+
+{
+  "error": "Race 'НеизвестнаяРаса' not found.",
+  "available_races": ["Эльф", "Дварф", ...]
+}
+
+🌐 Примеры на разных языках
+1. C# (.NET)
+csharp
+
+using System;
+using System.Net.Http;
+using System.Text.Json;
+using System.Threading.Tasks;
+using System.Collections.Generic;
+
+public class DndNameClient : IDisposable
+{
+    private readonly HttpClient _httpClient;
+    private readonly string _baseUrl;
+
+    public DndNameClient(string baseUrl = "https://dnd-name-generator-api.vercel.app")
+    {
+        _httpClient = new HttpClient();
+        _baseUrl = baseUrl.TrimEnd('/');
+    }
+
+    public async Task<string> GenerateNameAsync(string race, string lang = "ru")
+    {
+        if (string.IsNullOrWhiteSpace(race))
+            throw new ArgumentException("Раса не может быть пустой.", nameof(race));
+
+        string url = $"{_baseUrl}/generate?race={Uri.EscapeDataString(race)}&lang={lang}";
+        string jsonResponse = await _httpClient.GetStringAsync(url);
+        var result = JsonSerializer.Deserialize<Dictionary<string, string>>(jsonResponse);
+        return result?["name"] ?? "Ошибка: имя не получено";
+    }
+
+    public void Dispose() => _httpClient?.Dispose();
+}
+
+// Пример использования
+var client = new DndNameClient();
+string name = await client.GenerateNameAsync("Эльф", "ru");
+Console.WriteLine(name);
+
+2. Python
+python
+
+import requests
+
+def generate_name(race, lang="ru"):
+    base_url = "https://dnd-name-generator-api.vercel.app"
+    params = {"race": race, "lang": lang}
+    response = requests.get(f"{base_url}/generate", params=params)
+    response.raise_for_status()
+    data = response.json()
+    return data["name"]
+
+# Пример использования
+name = generate_name("Эльф", "ru")
+print(name)
+
+3. JavaScript (Node.js / Fetch)
+javascript
+
+// Node.js (axios)
+const axios = require('axios');
+
+async function generateName(race, lang = 'ru') {
+    const baseUrl = 'https://dnd-name-generator-api.vercel.app';
+    const response = await axios.get(`${baseUrl}/generate`, {
+        params: { race, lang }
+    });
+    return response.data.name;
+}
+
+// Пример использования
+generateName('Эльф', 'ru').then(console.log);
+
+javascript
+
+// Браузер (fetch)
+async function generateName(race, lang = 'ru') {
+    const baseUrl = 'https://dnd-name-generator-api.vercel.app';
+    const response = await fetch(`${baseUrl}/generate?race=${encodeURIComponent(race)}&lang=${lang}`);
+    const data = await response.json();
+    return data.name;
+}
+
+// Пример использования
+generateName('Эльф', 'ru').then(console.log);
+
+4. cURL (командная строка)
+bash
+
+curl "https://dnd-name-generator-api.vercel.app/generate?race=Эльф&lang=ru"
+
+5. Java (Unirest / HttpClient)
+java
+
+import kong.unirest.Unirest;
+import kong.unirest.HttpResponse;
+import kong.unirest.JsonNode;
+
+public class DndNameClient {
+    private static final String BASE_URL = "https://dnd-name-generator-api.vercel.app";
+
+    public static String generateName(String race, String lang) {
+        HttpResponse<JsonNode> response = Unirest.get(BASE_URL + "/generate")
+                .queryString("race", race)
+                .queryString("lang", lang)
+                .asJson();
+        return response.getBody().getObject().getString("name");
+    }
+
+    public static void main(String[] args) {
+        String name = generateName("Эльф", "ru");
+        System.out.println(name);
+    }
+}
+
+6. Ruby
+ruby
+
+require 'net/http'
+require 'json'
+
+def generate_name(race, lang = 'ru')
+    url = URI("https://dnd-name-generator-api.vercel.app/generate")
+    params = {race: race, lang: lang}
+    url.query = URI.encode_www_form(params)
+
+    response = Net::HTTP.get_response(url)
+    data = JSON.parse(response.body)
+    data["name"]
+end
+
+# Пример использования
+puts generate_name("Эльф", "ru")
 
 ## 🧩 Поддерживаемые расы
 
