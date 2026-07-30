@@ -1,3 +1,15 @@
+"""
+D&D Name Generator — Console Utility
+
+This script provides a command-line interface for generating random D&D names.
+It checks for updates from a remote JSON source and allows the user to update
+the local name database before generating names.
+
+It is NOT required for the API to run. It can be used independently for testing,
+data management, or offline name generation.
+
+"""
+
 import json
 import random
 import requests
@@ -25,7 +37,6 @@ if remote_version and remote_version != local_version:
         print("The database has been updated!")
         data = remote_data
         local_version = remote_version
-
 
 
 version = data["meta"]["version"]
